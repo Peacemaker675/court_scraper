@@ -1,0 +1,7 @@
+camelot-py[cv]
+python-dotenv
+pandas
+psycopg2
+requests
+selenium
+pdfplumber
