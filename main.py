@@ -65,6 +65,11 @@ def process_pdf(court_name, pdf_file, chunk_size=50):
 # the main function to process data of each court
 def main():
     try:
+        if os.path.exists("temp_csv"):
+            os.mkdir("temp_csv")
+        if os.path.exists("temp_pdf"):
+            os.mkdir("temp_pdf")
+            
         court_classes = {name: obj for name, obj in inspect.getmembers(courts, inspect.isclass) if name.lower().endswith("court")}
         
         for court_name, court_class in court_classes.items():
